@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timers</title>
+    <style>
+       table{
+            border: 1px solid;
+            width: 40%;
+        }
+       td{
+           border-right: 1px solid;
+           width: 33%;
+       }
+       td.lastOne{
+           border-right: none;
+       }
+    </style>
+</head>
+<body>
+<table>
+    <tr th:each="timer: ${timers}">
+        <td th:text="${timer.getNickName()}"></td>
+        <td th:text="${timer.getTime()}"></td>
+        <td class="lastOne" th:text="${timer.getDate()}"></td>
+    </tr>
+</table>
+</body>
+</html>

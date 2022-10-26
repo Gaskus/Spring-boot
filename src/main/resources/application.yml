@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-flepy.alwaysdata.net/flepy_margonem
+    username: flepy
+    password: kukuku2485
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    properties:
+      jdbc:
+      time_zone: UTC
+    hibernate:
+      ddl-auto: update
